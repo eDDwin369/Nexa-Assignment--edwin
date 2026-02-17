@@ -1,0 +1,92 @@
+<div class="report-container">
+    <div class="header">
+        <span class="material-icons icon">schedule</span>
+        <h3>Logged Hours</h3>
+    </div>
+
+    <div class="content">
+        <div class="progress-section">
+            <div class="progress-circle">
+                <div class="inner-text">
+                    <span class="large-text">6.5h</span>
+                    <span class="small-text">of 8h</span>
+                </div>
+                <!-- SVG for precise segmented circle -->
+                <svg class="progress-ring" width="120" height="120">
+                    <circle class="progress-ring__circle-bg" stroke="#e0e0e0" stroke-width="8" fill="transparent" r="52"
+                        cx="60" cy="60" />
+                    <circle class="progress-ring__circle" stroke="#3b82f6" stroke-width="8" fill="transparent" r="52"
+                        cx="60" cy="60" stroke-dasharray="250" stroke-dashoffset="60" stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-header">
+                <span class="material-icons small-icon">calendar_today</span>
+                <span>This Week</span>
+            </div>
+            <div class="bars">
+                <!-- Bars with background track and gradient fill -->
+                <div class="bar-col">
+                    <div class="bar-track">
+                        <div class="bar-fill" style="height: 60%"></div>
+                    </div><span class="day-label">Mon</span>
+                </div>
+                <div class="bar-col">
+                    <div class="bar-track">
+                        <div class="bar-fill" style="height: 75%"></div>
+                    </div><span class="day-label">Tue</span>
+                </div>
+                <div class="bar-col">
+                    <div class="bar-track">
+                        <div class="bar-fill" style="height: 50%"></div>
+                    </div><span class="day-label">Wed</span>
+                </div>
+                <div class="bar-col">
+                    <div class="bar-track">
+                        <div class="bar-fill" style="height: 85%"></div>
+                    </div><span class="day-label">Thu</span>
+                </div>
+                <div class="bar-col">
+                    <div class="bar-track">
+                        <div class="bar-fill" style="height: 65%"></div>
+                    </div><span class="day-label">Fri</span>
+                </div>
+                <div class="bar-col">
+                    <div class="bar-track">
+                        <div class="bar-fill" style="height: 20%"></div>
+                    </div><span class="day-label">Sat</span>
+                </div>
+                <div class="bar-col">
+                    <div class="bar-track">
+                        <div class="bar-fill" style="height: 15%"></div>
+                    </div><span class="day-label">Sun</span>
+                </div>
+            </div>
+            <div class="total-text">Total: <strong>41.5h this week</strong></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="stat-item">
+            <span class="label">Current Session</span>
+            <span class="value">2h 34m</span>
+        </div>
+        <div class="stat-item">
+            <span class="label">Login Time</span>
+            <span class="value">09:15 AM</span>
+        </div>
+        <div class="stat-item">
+            <span class="label">Status</span>
+            <span class="value status-active"><span class="dot"></span> Active</span>
+        </div>
+    </div>
+</div>
+<!-- <div class="summary-text">
+    Total: <strong>41.5h</strong> this week
+    <br>
+    <span style="display: flex; align-items: center; gap: 5px; margin-top: 5px; font-size: 0.8rem; color: #2ecc71;">
+        <span class="material-icons" style="font-size: 16px;">trending_up</span> +2.4% vs last week
+    </span>
+</div> -->

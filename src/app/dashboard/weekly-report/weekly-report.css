@@ -1,0 +1,210 @@
+:host {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.report-container {
+    background: linear-gradient(180deg, #F0F4FF 0%, #E6EEFA 100%);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.header .icon {
+    color: #3b82f6;
+    font-size: 1.2rem;
+}
+
+/* Main Content Layout */
+.content {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+/* Progress Circle */
+.progress-section {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring__circle-bg {
+    stroke: rgba(59, 130, 246, 0.1);
+}
+
+.progress-ring__circle {
+    stroke: #3b82f6;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+}
+
+/* Segmented effect hack: dashed stroke? 
+   Actually, the design shows a smooth circle but maybe segmented tracks.
+   Let's stick to smooth for now to match general style unless user was specific about "segmented". 
+   Wait, screenshot has segments. 
+   Let's try dashed stroke for segments.
+*/
+.progress-ring__circle {
+    stroke-dasharray: 40 5;
+    /* Segmented look */
+}
+
+.inner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.large-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1;
+}
+
+.small-text {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* Chart Section */
+.chart-section {
+    flex: 1;
+}
+
+.chart-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.small-icon {
+    font-size: 1rem;
+}
+
+.bars {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    margin-bottom: 0.5rem;
+    align-items: flex-end;
+}
+
+.bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 12px;
+}
+
+.bar-track {
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    /* Light track */
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar-fill {
+    width: 100%;
+    background: linear-gradient(180deg, #a855f7 0%, #3b82f6 100%);
+    /* Purple to Blue gradient */
+    border-radius: 10px;
+}
+
+.day-label {
+    font-size: 0.7rem;
+    color: #64748b;
+}
+
+.total-text {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.total-text strong {
+    color: #1e293b;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.stat-item .label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.stat-item .value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.status-active {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #10b981;
+    /* Green */
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+}

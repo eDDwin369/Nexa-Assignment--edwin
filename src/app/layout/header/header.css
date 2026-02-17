@@ -1,0 +1,142 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Sections */
+.header-left,
+.header-right {
+    flex: 1;
+    /* Take up equal space on sides */
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    justify-content: flex-start;
+    /* Align right content to end */
+    gap: 1.5rem;
+}
+
+.header-center {
+    flex: 2;
+    /* Center can take more space if needed, or stick to auto */
+    display: flex;
+    justify-content: center;
+}
+
+/* Content Styles */
+.greeting {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a237e;
+    /* Dark Blue */
+}
+
+.dropdown {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-btn {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    color: #666;
+    position: relative;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 10px;
+    right: 11px;
+    width: 8px;
+    height: 8px;
+    background: #ff4757;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.avatar {
+    background: #ff6b00;
+    color: white;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    .header-left .company-name {
+        display: none;
+        /* Save space */
+    }
+
+    .greeting {
+        display: none;
+    }
+
+    .header-left {
+        display: none;
+    }
+
+    .header-center {
+        justify-content: flex-start;
+        /* Align to left */
+        flex: 3;
+    }
+
+    .header-right {
+        justify-content: flex-end;
+        /* Ensure icons stay right */
+        gap: 0.5rem;
+        flex: 1;
+    }
+
+    .icon-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .dropdown {
+        display: none;
+    }
+}

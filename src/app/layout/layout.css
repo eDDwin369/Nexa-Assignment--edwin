@@ -1,0 +1,67 @@
+.layout-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* Prevent body scroll */
+    background-color: #f5f7fa;
+    font-family: 'Poppins', sans-serif;
+    /* Ensure font is inherited */
+}
+
+.sidebar {
+    width: auto;
+    /* Let sidebar determine its width + margins */
+    flex-shrink: 0;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f7fa;
+    /* Light background for dashboard content */
+    overflow: hidden;
+}
+
+.header {
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.content-body {
+    flex-grow: 1;
+    overflow-y: hidden;
+    /* User requested remove scroll for dashboard */
+    padding: 1rem;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .layout-container {
+        flex-direction: column;
+        height: 100vh;
+        /* Keep viewport height */
+        overflow: hidden;
+    }
+
+    .main-content {
+        overflow-y: auto;
+        /* Scroll mainly here */
+        height: 100%;
+    }
+
+    .content-body {
+        overflow-y: visible;
+        /* Let main-content handle scroll */
+        padding-bottom: 100px;
+        /* Space for bottom nav */
+    }
+
+    .sidebar {
+        order: 2;
+        /* Move to bottom if flow allows, but fixed position handles it better */
+        width: 100%;
+        height: auto;
+    }
+}
