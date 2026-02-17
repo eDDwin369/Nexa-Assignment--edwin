@@ -44,9 +44,22 @@
 }
 
 /* Response for smaller screens */
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
+    .dashboard-grid {
+        grid-template-columns: 2fr 1fr;
+        /* Give side widgets more room at narrower widths */
+    }
+}
+
+@media (max-width: 1200px) {
     .dashboard-grid {
         grid-template-columns: 1fr;
+    }
+
+    .side-widgets {
+        height: auto;
+        overflow: visible;
+        padding-right: 0;
     }
 }
 

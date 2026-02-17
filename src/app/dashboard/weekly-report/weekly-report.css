@@ -208,3 +208,48 @@
     background-color: #10b981;
     border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+    .report-container {
+        padding: 1rem;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .progress-section {
+        width: 100px;
+        height: 100px;
+    }
+
+    .progress-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .progress-circle svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .large-text {
+        font-size: 1.1rem;
+    }
+
+    .chart-section {
+        width: 100%;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .stat-item {
+        flex: 1 1 auto;
+        min-width: 80px;
+    }
+}

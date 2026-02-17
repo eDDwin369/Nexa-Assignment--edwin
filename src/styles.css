@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body,
 html {
     font-family: 'Poppins', sans-serif;
@@ -6,4 +13,5 @@ html {
     padding: 0;
     background-color: #f5f7fa;
     /* Light background for the dashboard */
+    overflow-x: hidden;
 }

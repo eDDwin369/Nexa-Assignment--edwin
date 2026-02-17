@@ -31,8 +31,8 @@
 
 .content-body {
     flex-grow: 1;
-    overflow-y: hidden;
-    /* User requested remove scroll for dashboard */
+    overflow-y: auto;
+    /* Enable scroll when content overflows viewport */
     padding: 1rem;
     position: relative;
 }
