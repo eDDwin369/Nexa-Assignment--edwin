@@ -54,7 +54,7 @@
     .content-body {
         overflow-y: visible;
         /* Let main-content handle scroll */
-        padding-bottom: 100px;
+        padding-bottom: 120px;
         /* Space for bottom nav */
     }
 
